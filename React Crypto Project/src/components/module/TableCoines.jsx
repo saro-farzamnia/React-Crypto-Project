@@ -1,12 +1,25 @@
-import Loader from "./LoadeSpinnerr"
 import TableRow from "./TableRow"
+import { Vortex } from 'react-loader-spinner'
 
 const TableCoines = ({coines,isLoading}) => {
-    // console.log({coines})
+    console.log({coines})
   return (
     <div>
       {
-        isLoading ?  <Loader/> : <table>
+        isLoading ? <div style={{
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100vh'
+}}> <Vortex
+  visible={true}
+  height="150"
+  width="150"
+  ariaLabel="vortex-loading"
+  wrapperStyle={{}}
+  wrapperClass="vortex-wrapper"
+  colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
+  /> </div> : <table>
         <thead>
           <tr>
             <th>Coin</th>
