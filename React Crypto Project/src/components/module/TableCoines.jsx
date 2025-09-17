@@ -1,14 +1,15 @@
-import TableRow from "./TableRow"
-import LoaderPage from "./LoaderPage"
-import styles from "./TableCoin.module.css"
+import TableRow from "./TableRow";
+import LoaderPage from "./LoaderPage";
+import styles from "./TableCoin.module.css";
 
-const TableCoines = ({coines,isLoading}) => {
-    console.log({coines})
+const TableCoines = ({ coines, isLoading }) => {
+  console.log({ coines });
   return (
-    <div className={styles.container} >
-      {
-        isLoading ?  <LoaderPage/>  :
-        <table className={styles.table} >
+    <div className={styles.container}>
+      {isLoading ? (
+        <LoaderPage />
+      ) : (
+        <table className={styles.table}>
           <thead>
             <tr>
               <th>Coin</th>
@@ -20,17 +21,14 @@ const TableCoines = ({coines,isLoading}) => {
             </tr>
           </thead>
           <tbody>
-            {
-              coines.map(coin => 
-                <TableRow coin={coin} key={coin.id} />
-              )
-           }
+            {coines.map((coin) => (
+              <TableRow coin={coin} key={coin.id} />
+            ))}
           </tbody>
         </table>
-      }
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default TableCoines
-
+export default TableCoines;
