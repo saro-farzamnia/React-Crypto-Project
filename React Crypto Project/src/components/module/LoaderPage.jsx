@@ -8,6 +8,7 @@ const LoaderPage = () => {
   alignItems: "center",
   height: "80vh"
 }}>
+      
       <Vortex
   visible={true}
   height="190"
@@ -17,6 +18,7 @@ const LoaderPage = () => {
   wrapperClass="vortex-wrapper"
   colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
   />
+  
     </div>
   )
 }
