@@ -36,7 +36,7 @@ const Search = ({ currency, setCurrency }) => {
   }, [text]);
 
   return (
-    <div className={styles.searchBox} >
+    <div className={styles.searchBox}>
       <input
         type="text"
         placeholder="Search"
@@ -50,17 +50,19 @@ const Search = ({ currency, setCurrency }) => {
         <option value="jpy">JPY</option>
       </select>
 
-      <div className={styles.searchResult} >
-        {isLoading && <LoaderPage />}
-        <ul>
-          {coins.map((coin) => (
-            <li key={coin.id}>
-              <img src={coin.thumb} alt={coin.name} />
-              <p>{coin.name}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {(!!coins.length || isLoading) && (
+        <div className={styles.searchResult}>
+          {isLoading && <LoaderPage />}
+          <ul>
+            {coins.map((coin) => (
+              <li key={coin.id}>
+                <img src={coin.thumb} alt={coin.name} />
+                <p>{coin.name}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
