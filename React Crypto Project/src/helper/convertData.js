@@ -1,4 +1,4 @@
-const convertData = (type , data) => {
+const converData = (type, data) => {
   const convertedData = data[type].map((item) => {
     return {
       date: item[0],
@@ -8,9 +8,9 @@ const convertData = (type , data) => {
   return convertedData;
 };
 
-export { convertData };
+export { converData };
 
-// const convertData = (type, data) => {
+// const converData = (type, data) => {
 //   const convertedData = data[type].map((item) => {
 //     return {
 //       date: item[0],
@@ -20,4 +20,4 @@ export { convertData };
 //   return convertedData;
 // };
 
-// export { convertData };
+// export { converData };

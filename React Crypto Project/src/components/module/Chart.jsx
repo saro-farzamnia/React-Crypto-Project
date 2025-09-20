@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Chart.module.css";
-import { convertData } from "../../helper/convertData";
+import { converData } from "../../helper/convertData";
 import {
   CartesianGrid,
   Legend,
@@ -23,7 +23,7 @@ const Chart = ({ chart, setChart }) => {
       </span>
       <div className={styles.chart}>
         <div className={styles.graph}>
-          <ChartComponent data={convertData(type, chart)} type={type} />
+          <ChartComponent data={converData(chart, type)} type={type} />
         </div>
       </div>
     </div>
